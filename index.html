@@ -1,480 +1,630 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <title>KPM - Kelompok 6</title>
-    <link rel="icon" href="IMG_1996.ico" type="image/x-icon">
+
+    <title>Document</title>
+
+    <style>
+      /* WIP */
+      body {
+        font-size: 18px;
+        font-family: "Helvetica", sans-serif;
+        font-weight: 400;
+        line-height: 120%;
+        margin: 0;
+        padding: 0
+      }
+      main {
+        background: #003449;
+        height: 100vh;
+        width: 100vw;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        overflow-x: hidden;
+      }
+      .location {
+        align-self: center;
+        padding: 10%;
+        h1 {
+          color: #bbb;
+          font-size: 300%;
+          font-weight: 900;
+          margin-bottom: 30px;
+          line-height: 1.5;
+        }
+        p {
+          color: #bbb;
+          margin-bottom: 60px;
+        }
+      }
+      .featured {
+        align-self: center;
+        .slider {
+          list-style: none;
+          padding: 0;
+        }
+        .slider li {
+          height: 400px;
+          width: 300px;
+          border-radius: 4px;
+          background-color: #00bcd4;
+          display: flex;
+          h2 {
+            margin-top: auto;
+            background: #fff;
+            width: 100%;
+            padding: 20px 20px;
+            display: block;
+            bottom: 0;
+          }
+        }
+        .slider li:nth-child(n) {
+          background-color: #3599db;
+        }
+        .slider li:nth-child(2n) {
+          background-color: #e61b77;
+        }
+        .slider li:nth-child(3n) {
+          background-color: #00bcd4;
+        }
+        .slider li:nth-child(4n) {
+          background-color: #f4b251;
+        }
+        .slider li:nth-child(5n) {
+          background-color: #8e4497;
+        }
+      }
+
+      /* STACKED CARDS */
+      .stacked-cards {
+        position: relative;
+      }
+      .stacked-cards ul {
+        position: relative;
+        max-width: 60%;
+        margin: 0 auto;
+        padding-left: 0;
+      }
+
+      .stacked-cards li {
+        margin-top: 5px;
+        cursor: pointer;
+        border-radius: 8px;
+        box-shadow: 0 3px 6px 0px #333;
+        list-style: none;
+        width: 65%;
+        position: absolute;
+        left: 50%;
+        transition: 0.5s ease transform;
+        user-select: none;
+      }
+
+      .stacked-cards li:after {
+        bottom: 0;
+        content: "";
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+      .stacked-cards li img {
+        position: relative;
+        display: block;
+        max-width: 100%;
+        height: auto;
+        z-index: 4;
+      }
+      .stacked-cards li.active {
+        cursor: default;
+        box-shadow: 0 5px 10px 0px #333;
+        transition: 0.5s ease transform;
+      }
+    </style>
   </head>
   <body>
-    <div
-      class="min-h-screen min-v-screen flex flex-col items-center justify-center bg-gray-100 px-1 py-5 gap-4"
-      style="background-color: #003449"
-    >
-      <div>
-        <h1 class="text-xl font-bold text-center text-white">
-          KPM - Kelompok 6
-        </h1>
-        <h1 class="text-xl font-bold text-center text-white">
-          KABUPATEN MALANG | DESA ASRIKATON | DUSUN MENDURAN | RW 08
-        </h1>
+    <main>
+      <div class="featured stacked-cards">
+        <ul class="slider">
+          <li class="item">
+            <h2>
+              <img src="images/20250113_223951.jpg" alt="image" />
+            </h2>
+          </li>
+          <li class="item">
+            <h2>
+              <img src="images/20250113_224219.jpg" alt="image" />
+            </h2>
+          </li>
+          <li class="item">
+            <h2>
+              <img src="images/20250113_224512.jpg" alt="image" />
+            </h2>
+          </li>
+          <li class="item">
+            <h2>
+              <img src="images/20250113_224620.jpg" alt="image" />
+            </h2>
+          </li>
+          <li class="item">
+            <h2>
+              <img src="images/20250113_224947.jpg" alt="image" />
+            </h2>
+          </li>
+          <li class="item">
+            <h2>
+              <img src="images/20250114_001319.jpg" alt="image" />
+            </h2>
+          </li>
+
+          <li class="item">
+            <h2>
+              <img src="images/20250114_001718.jpg" alt="image" />
+            </h2>
+          </li>
+          <li class="item">
+            <h2>
+              <img src="images/20250114_001856.jpg" alt="image" />
+            </h2>
+          </li>
+          <li class="item">
+            <h2>
+              <img src="images/20250114_002106.jpg" alt="image" />
+            </h2>
+          </li>
+          <li class="item">
+            <h2>
+              <img src="images/20250114_005205.jpg" alt="image" />
+            </h2>
+          </li>
+          <li class="item">
+            <h2>
+              <img src="images/20250113_230320.jpg" alt="image" />
+            </h2>
+          </li>
+          <li class="item">
+            <h2>
+              <img src="images/20250114_005741.jpg" alt="image" />
+            </h2>
+          </li>
+          <li class="item">
+            <h2>
+              <img src="images/20250114_002625.jpg" alt="image" />
+            </h2>
+          </li>
+          <li class="item">
+            <h2>
+              <img src="images/20250114_002817.jpg" alt="image" />
+            </h2>
+          </li>
+
+          <li class="item">
+            <h2>
+              <img src="images/20250114_002958.jpg" alt="image" />
+            </h2>
+          </li>
+          <li class="item">
+            <h2>
+              <img src="images/20250114_003132.jpg" alt="image" />
+            </h2>
+          </li>
+
+
+
+
+
+          <li class="item">
+            <h2>
+              <img src="images/20250113_231237.jpg" alt="image" />
+            </h2>
+          </li>
+          <li class="item">
+            <h2>
+              <img src="images/20250114_015022.jpg" alt="image" />
+            </h2>
+          </li>
+          <li class="item">
+            <h2>
+              <img src="images/20250114_020923.jpg" alt="image" />
+            </h2>
+          </li>
+          <li class="item">
+            <h2>
+              <img src="images/20250113_231550.jpg" alt="image" />
+            </h2>
+          </li>
+          <li class="item">
+            <h2>
+              <img src="images/20250113_233700.jpg" alt="image" />
+            </h2>
+          </li>
+          <li class="item">
+            <h2>
+              <img src="images/20250114_003702.jpg" alt="image" />
+            </h2>
+          </li>
+
+          <li class="item">
+            <h2>
+              <img src="images/20250114_003837.jpg" alt="image" />
+            </h2>
+          </li>
+          <li class="item">
+            <h2>
+              <img src="images/20250114_003949.jpg" alt="image" />
+            </h2>
+          </li>
+          
+        </ul>
       </div>
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19675.018257503434!2d112.68188766216505!3d-7.950482323181878!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd6292262c4baf9%3A0x6de55c07cfc403b2!2sAsrikaton%2C%20Kec.%20Pakis%2C%20Kabupaten%20Malang%2C%20Jawa%20Timur!5e1!3m2!1sid!2sid!4v1736796249525!5m2!1sid!2sid"
-        style="
-          width: 97vw;
-          height: 25vh;
-          max-width: 900px;
-          min-height: 450px;
-          box-shadow: -9px 9px 9px rgba(0, 0, 0, 0.25);
-        "
-        allowfullscreen=""
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-      ></iframe>
-      <a href="teams.html">
-        <button
-          type="button"
-          class="text-gray-900 bg-white hover:bg-gray-100 border border-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-600 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700 me-2 mb-2"
-        >
-          <svg
-            aria-hidden="true"
-            class="w-6 h-5 me-2 -ms-1"
-            viewBox="0 0 2405 2501"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <g clip-path="url(#clip0_1512_1323)">
-              <path
-                d="M2278.79 1730.86L2133.62 2221.69L1848.64 2143.76L2278.79 1730.86Z"
-                fill="#E4761B"
-                stroke="#E4761B"
-                stroke-width="5.94955"
-              />
-              <path
-                d="M1848.64 2143.76L2123.51 1767.15L2278.79 1730.86L1848.64 2143.76Z"
-                fill="#E4761B"
-                stroke="#E4761B"
-                stroke-width="5.94955"
-              />
-              <path
-                d="M2065.2 1360.79L2278.79 1730.86L2123.51 1767.15L2065.2 1360.79ZM2065.2 1360.79L2202.64 1265.6L2278.79 1730.86L2065.2 1360.79Z"
-                fill="#F6851B"
-                stroke="#F6851B"
-                stroke-width="5.94955"
-              />
-              <path
-                d="M1890.29 1081.17L2285.34 919.338L2265.7 1007.99L1890.29 1081.17ZM2253.21 1114.48L1890.29 1081.17L2265.7 1007.99L2253.21 1114.48Z"
-                fill="#763D16"
-                stroke="#763D16"
-                stroke-width="5.94955"
-              />
-              <path
-                d="M2253.21 1114.48L2202.64 1265.6L1890.29 1081.17L2253.21 1114.48ZM2332.34 956.82L2265.7 1007.99L2285.34 919.338L2332.34 956.82ZM2253.21 1114.48L2265.7 1007.99L2318.65 1052.01L2253.21 1114.48Z"
-                fill="#763D16"
-                stroke="#763D16"
-                stroke-width="5.94955"
-              />
-              <path
-                d="M1542.24 2024.17L1641 2055.7L1848.64 2143.75L1542.24 2024.17Z"
-                fill="#E2761B"
-                stroke="#E2761B"
-                stroke-width="5.94955"
-              />
-              <path
-                d="M2202.64 1265.6L2253.21 1114.48L2296.64 1147.8L2202.64 1265.6ZM2202.64 1265.6L1792.71 1130.55L1890.29 1081.17L2202.64 1265.6Z"
-                fill="#763D16"
-                stroke="#763D16"
-                stroke-width="5.94955"
-              />
-              <path
-                d="M1987.86 617.696L1890.29 1081.17L1792.71 1130.55L1987.86 617.696Z"
-                fill="#763D16"
-                stroke="#763D16"
-                stroke-width="5.94955"
-              />
-              <path
-                d="M2285.34 919.338L1890.29 1081.17L1987.86 617.696L2285.34 919.338Z"
-                fill="#763D16"
-                stroke="#763D16"
-                stroke-width="5.94955"
-              />
-              <path
-                d="M1987.86 617.696L2400.16 570.1L2285.34 919.338L1987.86 617.696Z"
-                fill="#763D16"
-                stroke="#763D16"
-                stroke-width="5.94955"
-              />
-              <path
-                d="M2202.64 1265.6L2065.2 1360.79L1792.71 1130.55L2202.64 1265.6Z"
-                fill="#F6851B"
-                stroke="#F6851B"
-                stroke-width="5.94955"
-              />
-              <path
-                d="M2382.31 236.33L2400.16 570.1L1987.86 617.696L2382.31 236.33Z"
-                fill="#763D16"
-                stroke="#763D16"
-                stroke-width="5.94955"
-              />
-              <path
-                d="M2382.31 236.33L1558.3 835.45L1547.59 429.095L2382.31 236.33Z"
-                fill="#E2761B"
-                stroke="#E2761B"
-                stroke-width="5.94955"
-              />
-              <path
-                d="M934.789 380.309L1547.59 429.095L1558.3 835.449L934.789 380.309Z"
-                fill="#F6851B"
-                stroke="#F6851B"
-                stroke-width="5.94955"
-              />
-              <path
-                d="M1792.71 1130.55L1558.3 835.449L1987.86 617.696L1792.71 1130.55Z"
-                fill="#763D16"
-                stroke="#763D16"
-                stroke-width="5.94955"
-              />
-              <path
-                d="M1792.71 1130.55L2065.2 1360.79L1682.65 1403.04L1792.71 1130.55Z"
-                fill="#E4761B"
-                stroke="#E4761B"
-                stroke-width="5.94955"
-              />
-              <path
-                d="M1682.65 1403.04L1558.3 835.449L1792.71 1130.55L1682.65 1403.04Z"
-                fill="#E4761B"
-                stroke="#E4761B"
-                stroke-width="5.94955"
-              />
-              <path
-                d="M1987.86 617.696L1558.3 835.45L2382.31 236.33L1987.86 617.696Z"
-                fill="#763D16"
-                stroke="#763D16"
-                stroke-width="5.94955"
-              />
-              <path
-                d="M940.144 2134.24L1134.69 2337.11L869.939 2096.16L940.144 2134.24Z"
-                fill="#C0AD9E"
-                stroke="#C0AD9E"
-                stroke-width="5.94955"
-              />
-              <path
-                d="M1848.64 2143.75L1940.86 1793.33L2123.51 1767.15L1848.64 2143.75Z"
-                fill="#CD6116"
-                stroke="#CD6116"
-                stroke-width="5.94955"
-              />
-              <path
-                d="M151.234 1157.92L487.978 803.917L194.666 1115.67L151.234 1157.92Z"
-                fill="#E2761B"
-                stroke="#E2761B"
-                stroke-width="5.94955"
-              />
-              <path
-                d="M2123.51 1767.15L1940.86 1793.33L2065.2 1360.79L2123.51 1767.15ZM1558.3 835.449L1230.48 824.74L934.789 380.309L1558.3 835.449Z"
-                fill="#F6851B"
-                stroke="#F6851B"
-                stroke-width="5.94955"
-              />
-              <path
-                d="M2065.2 1360.79L1940.86 1793.33L1930.74 1582.12L2065.2 1360.79Z"
-                fill="#E4751F"
-                stroke="#E4751F"
-                stroke-width="5.94955"
-              />
-              <path
-                d="M1682.65 1403.04L2065.2 1360.79L1930.74 1582.12L1682.65 1403.04Z"
-                fill="#CD6116"
-                stroke="#CD6116"
-                stroke-width="5.94955"
-              />
-              <path
-                d="M1230.48 824.74L1558.3 835.449L1682.65 1403.04L1230.48 824.74Z"
-                fill="#F6851B"
-                stroke="#F6851B"
-                stroke-width="5.94955"
-              />
-              <path
-                d="M1230.48 824.74L345.784 6.08252L934.79 380.309L1230.48 824.74ZM934.195 2258.58L165.513 2496.56L12.0146 1910.53L934.195 2258.58Z"
-                fill="#E4761B"
-                stroke="#E4761B"
-                stroke-width="5.94955"
-              />
-              <path
-                d="M265.465 1304.27L555.803 1076.41L799.14 1132.93L265.465 1304.27Z"
-                fill="#763D16"
-                stroke="#763D16"
-                stroke-width="5.94955"
-              />
-              <path
-                d="M799.139 1132.93L555.803 1076.41L686.098 538.567L799.139 1132.93Z"
-                fill="#763D16"
-                stroke="#763D16"
-                stroke-width="5.94955"
-              />
-              <path
-                d="M194.666 1115.67L555.803 1076.41L265.465 1304.27L194.666 1115.67Z"
-                fill="#763D16"
-                stroke="#763D16"
-                stroke-width="5.94955"
-              />
-              <path
-                d="M1930.74 1582.12L1780.81 1506.56L1682.65 1403.04L1930.74 1582.12Z"
-                fill="#CD6116"
-                stroke="#CD6116"
-                stroke-width="5.94955"
-              />
-              <path
-                d="M194.666 1115.67L169.083 980.618L555.803 1076.41L194.666 1115.67Z"
-                fill="#763D16"
-                stroke="#763D16"
-                stroke-width="5.94955"
-              />
-              <path
-                d="M1749.88 1676.72L1780.81 1506.56L1930.74 1582.12L1749.88 1676.72Z"
-                fill="#233447"
-                stroke="#233447"
-                stroke-width="5.94955"
-              />
-              <path
-                d="M1940.86 1793.33L1749.88 1676.72L1930.74 1582.12L1940.86 1793.33Z"
-                fill="#F6851B"
-                stroke="#F6851B"
-                stroke-width="5.94955"
-              />
-              <path
-                d="M555.803 1076.41L169.082 980.618L137.55 866.982L555.803 1076.41ZM686.098 538.567L555.803 1076.41L137.55 866.982L686.098 538.567ZM686.098 538.567L1230.48 824.74L799.139 1132.93L686.098 538.567Z"
-                fill="#763D16"
-                stroke="#763D16"
-                stroke-width="5.94955"
-              />
-              <path
-                d="M799.14 1132.93L1230.48 824.74L1422.65 1411.96L799.14 1132.93ZM1422.65 1411.96L826.508 1399.47L799.14 1132.93L1422.65 1411.96Z"
-                fill="#E4761B"
-                stroke="#E4761B"
-                stroke-width="5.94955"
-              />
-              <path
-                d="M265.465 1304.27L799.14 1132.93L826.508 1399.47L265.465 1304.27ZM1682.65 1403.04L1422.65 1411.96L1230.48 824.74L1682.65 1403.04Z"
-                fill="#F6851B"
-                stroke="#F6851B"
-                stroke-width="5.94955"
-              />
-              <path
-                d="M1780.81 1506.56L1749.88 1676.72L1682.65 1403.04L1780.81 1506.56Z"
-                fill="#CD6116"
-                stroke="#CD6116"
-                stroke-width="5.94955"
-              />
-              <path
-                d="M345.784 6.08252L1230.48 824.74L686.098 538.567L345.784 6.08252Z"
-                fill="#763D16"
-                stroke="#763D16"
-                stroke-width="5.94955"
-              />
-              <path
-                d="M12.0146 1910.53L758.088 1879.59L934.195 2258.58L12.0146 1910.53Z"
-                fill="#E4761B"
-                stroke="#E4761B"
-                stroke-width="5.94955"
-              />
-              <path
-                d="M934.194 2258.58L758.088 1879.59L1124.58 1861.75L934.194 2258.58Z"
-                fill="#CD6116"
-                stroke="#CD6116"
-                stroke-width="5.94955"
-              />
-              <path
-                d="M1749.88 1676.72L1940.86 1793.33L2046.16 2041.42L1749.88 1676.72ZM826.508 1399.47L12.0146 1910.53L265.465 1304.27L826.508 1399.47ZM758.088 1879.59L12.0146 1910.53L826.508 1399.47L758.088 1879.59ZM1682.65 1403.04L1731.43 1580.33L1495.83 1594.02L1682.65 1403.04ZM1495.83 1594.02L1422.65 1411.96L1682.65 1403.04L1495.83 1594.02Z"
-                fill="#F6851B"
-                stroke="#F6851B"
-                stroke-width="5.94955"
-              />
-              <path
-                d="M1134.69 2337.11L934.194 2258.58L1631.48 2375.79L1134.69 2337.11Z"
-                fill="#C0AD9E"
-                stroke="#C0AD9E"
-                stroke-width="5.94955"
-              />
-              <path
-                d="M265.465 1304.27L151.234 1157.91L194.666 1115.67L265.465 1304.27Z"
-                fill="#763D16"
-                stroke="#763D16"
-                stroke-width="5.94955"
-              />
-              <path
-                d="M1710.61 2288.92L1631.48 2375.79L934.194 2258.58L1710.61 2288.92Z"
-                fill="#D7C1B3"
-                stroke="#D7C1B3"
-                stroke-width="5.94955"
-              />
-              <path
-                d="M1748.09 2075.93L934.194 2258.58L1124.58 1861.75L1748.09 2075.93Z"
-                fill="#E4761B"
-                stroke="#E4761B"
-                stroke-width="5.94955"
-              />
-              <path
-                d="M934.194 2258.58L1748.09 2075.93L1710.61 2288.92L934.194 2258.58Z"
-                fill="#D7C1B3"
-                stroke="#D7C1B3"
-                stroke-width="5.94955"
-              />
-              <path
-                d="M137.55 866.982L110.777 409.462L686.098 538.567L137.55 866.982ZM194.665 1115.67L115.536 1035.35L169.082 980.618L194.665 1115.67Z"
-                fill="#763D16"
-                stroke="#763D16"
-                stroke-width="5.94955"
-              />
-              <path
-                d="M1289.38 1529.76L1422.65 1411.96L1403.61 1699.92L1289.38 1529.76Z"
-                fill="#CD6116"
-                stroke="#CD6116"
-                stroke-width="5.94955"
-              />
-              <path
-                d="M1422.65 1411.96L1289.38 1529.76L1095.43 1630.31L1422.65 1411.96Z"
-                fill="#CD6116"
-                stroke="#CD6116"
-                stroke-width="5.94955"
-              />
-              <path
-                d="M2046.16 2041.42L2009.87 2014.65L1749.88 1676.72L2046.16 2041.42Z"
-                fill="#F6851B"
-                stroke="#F6851B"
-                stroke-width="5.94955"
-              />
-              <path
-                d="M1095.43 1630.31L826.508 1399.47L1422.65 1411.96L1095.43 1630.31Z"
-                fill="#CD6116"
-                stroke="#CD6116"
-                stroke-width="5.94955"
-              />
-              <path
-                d="M1403.61 1699.92L1422.65 1411.96L1495.83 1594.02L1403.61 1699.92Z"
-                fill="#E4751F"
-                stroke="#E4751F"
-                stroke-width="5.94955"
-              />
-              <path
-                d="M89.3589 912.199L137.55 866.982L169.083 980.618L89.3589 912.199Z"
-                fill="#763D16"
-                stroke="#763D16"
-                stroke-width="5.94955"
-              />
-              <path
-                d="M1403.61 1699.92L1095.43 1630.31L1289.38 1529.76L1403.61 1699.92Z"
-                fill="#233447"
-                stroke="#233447"
-                stroke-width="5.94955"
-              />
-              <path
-                d="M686.098 538.567L110.777 409.462L345.784 6.08252L686.098 538.567Z"
-                fill="#763D16"
-                stroke="#763D16"
-                stroke-width="5.94955"
-              />
-              <path
-                d="M1631.48 2375.79L1664.2 2465.03L1134.69 2337.12L1631.48 2375.79Z"
-                fill="#C0AD9E"
-                stroke="#C0AD9E"
-                stroke-width="5.94955"
-              />
-              <path
-                d="M1124.58 1861.75L1095.43 1630.31L1403.61 1699.92L1124.58 1861.75Z"
-                fill="#F6851B"
-                stroke="#F6851B"
-                stroke-width="5.94955"
-              />
-              <path
-                d="M826.508 1399.47L1095.43 1630.31L1124.58 1861.75L826.508 1399.47Z"
-                fill="#E4751F"
-                stroke="#E4751F"
-                stroke-width="5.94955"
-              />
-              <path
-                d="M1495.83 1594.02L1731.43 1580.33L2009.87 2014.65L1495.83 1594.02ZM826.508 1399.47L1124.58 1861.75L758.088 1879.59L826.508 1399.47Z"
-                fill="#F6851B"
-                stroke="#F6851B"
-                stroke-width="5.94955"
-              />
-              <path
-                d="M1495.83 1594.02L1788.55 2039.64L1403.61 1699.92L1495.83 1594.02Z"
-                fill="#E4751F"
-                stroke="#E4751F"
-                stroke-width="5.94955"
-              />
-              <path
-                d="M1403.61 1699.92L1788.55 2039.64L1748.09 2075.93L1403.61 1699.92Z"
-                fill="#F6851B"
-                stroke="#F6851B"
-                stroke-width="5.94955"
-              />
-              <path
-                d="M1748.09 2075.93L1124.58 1861.75L1403.61 1699.92L1748.09 2075.93ZM2009.87 2014.65L1788.55 2039.64L1495.83 1594.02L2009.87 2014.65Z"
-                fill="#F6851B"
-                stroke="#F6851B"
-                stroke-width="5.94955"
-              />
-              <path
-                d="M2068.18 2224.07L1972.99 2415.05L1664.2 2465.03L2068.18 2224.07ZM1664.2 2465.03L1631.48 2375.79L1710.61 2288.92L1664.2 2465.03Z"
-                fill="#C0AD9E"
-                stroke="#C0AD9E"
-                stroke-width="5.94955"
-              />
-              <path
-                d="M1710.61 2288.92L1768.92 2265.72L1664.2 2465.03L1710.61 2288.92ZM1664.2 2465.03L1768.92 2265.72L2068.18 2224.07L1664.2 2465.03Z"
-                fill="#C0AD9E"
-                stroke="#C0AD9E"
-                stroke-width="5.94955"
-              />
-              <path
-                d="M2009.87 2014.65L2083.05 2059.27L1860.54 2086.04L2009.87 2014.65Z"
-                fill="#161616"
-                stroke="#161616"
-                stroke-width="5.94955"
-              />
-              <path
-                d="M1860.54 2086.04L1788.55 2039.64L2009.87 2014.65L1860.54 2086.04ZM1834.96 2121.15L2105.66 2088.42L2068.18 2224.07L1834.96 2121.15Z"
-                fill="#161616"
-                stroke="#161616"
-                stroke-width="5.94955"
-              />
-              <path
-                d="M2068.18 2224.07L1768.92 2265.72L1834.96 2121.15L2068.18 2224.07ZM1768.92 2265.72L1710.61 2288.92L1748.09 2075.93L1768.92 2265.72ZM1748.09 2075.93L1788.55 2039.64L1860.54 2086.04L1748.09 2075.93ZM2083.05 2059.27L2105.66 2088.42L1834.96 2121.15L2083.05 2059.27Z"
-                fill="#161616"
-                stroke="#161616"
-                stroke-width="5.94955"
-              />
-              <path
-                d="M1834.96 2121.15L1860.54 2086.04L2083.05 2059.27L1834.96 2121.15ZM1748.09 2075.93L1834.96 2121.15L1768.92 2265.72L1748.09 2075.93Z"
-                fill="#161616"
-                stroke="#161616"
-                stroke-width="5.94955"
-              />
-              <path
-                d="M1860.54 2086.04L1834.96 2121.15L1748.09 2075.93L1860.54 2086.04Z"
-                fill="#161616"
-                stroke="#161616"
-                stroke-width="5.94955"
-              />
-            </g>
-            <defs>
-              <clipPath id="clip0_1512_1323">
-                <rect
-                  width="2404"
-                  height="2500"
-                  fill="white"
-                  transform="translate(0.519043 0.132812)"
-                />
-              </clipPath>
-            </defs>
-          </svg>
-          Lihat Semua Daftar Anggota
-        </button>
-      </a>
-    </div>
+    </main>
+    <script>
+      /*
+       * Stacked Cards
+       */
+
+      (function () {
+        bind = function (fn, me) {
+          return function () {
+            return fn.apply(me, arguments);
+          };
+        };
+
+        this.stackedCards = (function () {
+          stackedCards.prototype.defaults = {
+            layout: "slide", // slide, fanOut
+            onClick: undefined, // onclick event provided
+            transformOrigin: "center", // css transformOrigin
+          };
+
+          function stackedCards(options) {
+            if (options == null) {
+              options = {};
+            }
+
+            this.draw = bind(this.draw, this);
+            this.config = this.extend(options, this.defaults);
+          }
+
+          stackedCards.prototype.init = function () {
+            this.element = window.document.documentElement;
+            if (
+              (ref = document.readyState) === "interactive" ||
+              ref === "complete"
+            ) {
+              this.draw();
+            } else {
+              document.addEventListener("DOMContentLoaded", this.draw);
+            }
+          };
+
+          stackedCards.prototype.draw = function () {
+            var me = this;
+
+            var selector = this.config.selector;
+
+            this.els = document.querySelectorAll(selector + " li");
+            var els = this.els;
+
+            this.parent = els[0].parentNode;
+
+            var getItemHeight = els[0].getBoundingClientRect().height;
+
+            /*var liWidth = 0;
+            for(var q = 0;q<els.length; q++) {
+                liWidth = liWidth + els[q].getBoundingClientRect().width;
+            }*/
+
+            els[0].parentNode.style.height = parseInt(getItemHeight) + "px";
+
+            // to get the active element's position, we will have to know if elements are in even/odd count
+            var lenAdjust = els.length % 2 == 0 ? -2 : -1;
+
+            // oneHalf if the centerPoint - things go left and right from here
+            var oneHalf = (els.length + lenAdjust) / 2;
+
+            var activeTransform = "translate(" + -50 + "%, 0%)  scale(1)";
+
+            this.detectSwipe();
+
+            Array.prototype.forEach.call(els, function (el) {
+              el.style.transformOrigin = me.config.transformOrigin;
+
+              el.addEventListener("click", function () {
+                var clickedEl = el;
+                var nextCnt = 0;
+                var prevCnt = 0;
+
+                do {
+                  // While there is a next sibling, loop
+                  var next = clickedEl.nextElementSibling;
+                  nextCnt = nextCnt + 1;
+                } while ((clickedEl = clickedEl.nextElementSibling));
+
+                // re-initialize the clickedEl to do the same for prev elements
+                clickedEl = el;
+
+                do {
+                  // While there is a prev sibling, loop
+                  var prev = clickedEl.previousElementSibling;
+                  prevCnt = prevCnt + 1;
+                } while ((clickedEl = clickedEl.previousElementSibling));
+
+                me.reCalculateTransformsOnClick(nextCnt - 1, prevCnt - 1);
+
+                me.loopNodeList(els, function (el) {
+                  el.classList.remove("active");
+                });
+
+                el.classList.add("active");
+                el.classList.add(me.config.layout);
+
+                el.style.zIndex = els.length * 5;
+                el.style.transform = activeTransform;
+
+                if (me.config.onClick !== undefined) {
+                  me.config.onClick(el);
+                }
+              });
+            });
+
+            els[oneHalf].click();
+          };
+
+          stackedCards.prototype.reCalculateTransformsOnClick = function (
+            nextCnt,
+            prevCnt
+          ) {
+            var z = 10;
+
+            var els = this.nodelistToArray(this.els);
+
+            var scale = 1,
+              translateX = 0,
+              rotateVal = 0,
+              rotate = "";
+            var rotateNegStart = 0; // ((75 / els.length) * (oneHalf))*-1;
+
+            var transformArr = [];
+            var zIndexArr = [];
+            var relArr = [];
+
+            var layout = this.config.layout;
+
+            var maxCntDivisor = Math.max(prevCnt, nextCnt);
+            var prevDivisor = 100 / maxCntDivisor;
+            var nextDivisor = 100 / maxCntDivisor;
+
+            if (prevCnt > nextCnt) {
+              scale = 0 + 100 / (prevCnt + 1) / 100;
+            } else {
+              scale = 1 - prevCnt * (1 / (nextCnt + 1));
+            }
+
+            var rotatePrevStart = ((prevCnt * 10) / prevCnt) * prevCnt * -1;
+            var rotateNextStart = (nextCnt * 10) / nextCnt;
+
+            for (var i = 0; i < prevCnt; i++) {
+              switch (layout) {
+                case "slide":
+                  if (i > 0) {
+                    scale = scale + 100 / (maxCntDivisor + 1) / 100;
+                  }
+
+                  translateX = -50 - prevDivisor * (prevCnt - i);
+
+                  rotate = "rotate(0deg)";
+                  break;
+                case "fanOut":
+                  rotateVal = rotatePrevStart;
+
+                  if (i > 0) {
+                    scale = scale + 100 / (maxCntDivisor + 1) / 100;
+                  }
+                  translateX = -50 - prevDivisor * (prevCnt - i);
+                  rotate = "rotate(" + rotateVal + "deg)";
+
+                  rotatePrevStart = rotatePrevStart + (prevCnt * 10) / prevCnt;
+
+                  break;
+                default:
+                  translateX = (150 - prevDivisor * 2 * i) * -1;
+                  rotate = "rotate(0deg)";
+              }
+
+              var styleStr =
+                "translate(" +
+                translateX +
+                "%, 0%)  scale(" +
+                scale +
+                ") " +
+                rotate;
+
+              z = z + 1;
+
+              els[i].style.transform = styleStr;
+              els[i].style.zIndex = z;
+            }
+
+            // we are going for active element, so make it higher
+            z = z - 1;
+
+            var j = 0;
+
+            rotateNegStart = 0;
+            scale = 1;
+            for (var i = prevCnt + 1; i < nextCnt + prevCnt + 1; i++) {
+              j = j + 1;
+              switch (layout) {
+                case "slide":
+                  scale = scale - 100 / (maxCntDivisor + 1) / 100;
+                  translateX = (50 - nextDivisor * j) * -1;
+                  rotate = "rotate(0deg)";
+                  break;
+                case "fanOut":
+                  rotateVal = rotateNextStart;
+
+                  scale = scale - 100 / (maxCntDivisor + 1) / 100;
+                  translateX = (50 - nextDivisor * j) * -1;
+                  rotate = "rotate(" + rotateVal + "deg)";
+
+                  rotateNextStart = rotateNextStart + (nextCnt * 10) / nextCnt;
+                  break;
+                default:
+                  translateX = (50 - prevDivisor * 2 * i) * -1;
+                  rotate = "rotate(0deg)";
+              }
+
+              z = z - 1;
+
+              var styleStr =
+                "translate(" +
+                translateX +
+                "%, 0%)  scale(" +
+                scale +
+                ") " +
+                rotate;
+
+              els[i].style.transform = styleStr;
+              els[i].style.zIndex = z;
+            }
+          };
+
+          stackedCards.prototype.detectSwipe = function () {
+            var me = this;
+            var regionEl = document.querySelector(me.config.selector);
+
+            me.detectSwipeDir(regionEl, function (swipedir) {
+              var activeEl = document.querySelector(
+                me.config.selector + " li.active"
+              );
+              if (swipedir == "left") {
+                activeEl.nextElementSibling.click();
+              } else if (swipedir == "right") {
+                activeEl.previousElementSibling.click();
+              }
+            });
+          };
+
+          stackedCards.prototype.extend = function (custom, defaults) {
+            var key, value;
+            for (key in defaults) {
+              value = defaults[key];
+              if (custom[key] == null) {
+                custom[key] = value;
+              }
+            }
+            return custom;
+          };
+
+          stackedCards.prototype.nodelistToArray = function (nodelist) {
+            var results = [];
+            var i, element;
+            for (i = 0; i < nodelist.length; i++) {
+              element = nodelist[i];
+              results.push(element);
+            }
+            return results;
+          };
+
+          stackedCards.prototype.loopNodeList = function (
+            els,
+            callback,
+            scope
+          ) {
+            for (var i = 0; i < els.length; i++) {
+              callback.call(scope, els[i]);
+            }
+          };
+
+          stackedCards.prototype.scrolledIn = function (el, offset) {
+            if (typeof el == "undefined") return;
+
+            var elemTop = el.getBoundingClientRect().top;
+            var elemBottom = el.getBoundingClientRect().bottom;
+
+            var scrolledInEl = elemTop >= 0 && elemTop <= window.innerHeight;
+            return scrolledInEl;
+          };
+
+          stackedCards.prototype.detectSwipeDir = function (el, callback) {
+            //credits: http://www.javascriptkit.com/javatutors/touchevents2.shtml
+
+            var touchsurface = el,
+              swipedir,
+              startX,
+              startY,
+              distX,
+              distY,
+              threshold = 75, //required min distance traveled to be considered swipe
+              restraint = 100, // maximum distance allowed at the same time in perpendicular direction
+              allowedTime = 300, // maximum time allowed to travel that distance
+              elapsedTime,
+              startTime,
+              handleswipe = callback || function (swipedir) {};
+
+            touchsurface.addEventListener(
+              "touchstart",
+              function (e) {
+                var touchobj = e.changedTouches[0];
+                swipedir = "none";
+                dist = 0;
+                startX = touchobj.pageX;
+                startY = touchobj.pageY;
+                startTime = new Date().getTime(); // record time when finger first makes contact with surface
+                e.preventDefault();
+              },
+              false
+            );
+
+            touchsurface.addEventListener(
+              "touchmove",
+              function (e) {
+                // e.preventDefault() // prevent scrolling when inside DIV
+              },
+              false
+            );
+
+            touchsurface.addEventListener(
+              "touchend",
+              function (e) {
+                var touchobj = e.changedTouches[0];
+                distX = touchobj.pageX - startX; // get horizontal dist traveled by finger while in contact with surface
+                distY = touchobj.pageY - startY; // get vertical dist traveled by finger while in contact with surface
+                elapsedTime = new Date().getTime() - startTime; // get time elapsed
+                if (elapsedTime <= allowedTime) {
+                  // first condition for awipe met
+                  if (
+                    Math.abs(distX) >= threshold &&
+                    Math.abs(distY) <= restraint
+                  ) {
+                    // 2nd condition for horizontal swipe met
+                    swipedir = distX < 0 ? "left" : "right"; // if dist traveled is negative, it indicates left swipe
+                  } else if (
+                    Math.abs(distY) >= threshold &&
+                    Math.abs(distX) <= restraint
+                  ) {
+                    // 2nd condition for vertical swipe met
+                    swipedir = distY < 0 ? "up" : "down"; // if dist traveled is negative, it indicates up swipe
+                  }
+                }
+                handleswipe(swipedir);
+                e.preventDefault();
+              },
+              false
+            );
+          };
+
+          return stackedCards;
+        })();
+      }).call(this);
+      var stackedCard = new stackedCards({
+        selector: ".featured",
+        layout: "slide",
+        transformOrigin: "center",
+      });
+      stackedCard.init();
+    </script>
   </body>
 </html>
