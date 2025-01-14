@@ -241,7 +241,7 @@
 
           // Adjust image styles based on window dimensions
           carouselImages.forEach((img) => {
-            if (windowWidth > windowHeight) {
+            if (windowWidth + 357 > windowHeight) {
               img.style.height = "100vh";
               img.style.width = "auto";
               console.log("window lebih lebar")
@@ -250,6 +250,7 @@
               img.style.height = "auto";
               console.log("window lebih tinggi")
             }
+            console.log(`width = ${windowWidth}\nheight = ${windowHeight}`)
           });
         }
 
