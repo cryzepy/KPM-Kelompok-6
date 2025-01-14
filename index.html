@@ -45,168 +45,168 @@
         <div class="carousel-item active">
           <img
             src="images/20250113_223951.jpg"
-            class="d-block h-100"
+            class="d-block"
             alt="..."
           />
         </div>
         <div class="carousel-item">
           <img
             src="images/20250113_224219.jpg"
-            class="d-block h-100"
+            class="d-block"
             alt="..."
           />
         </div>
         <div class="carousel-item">
           <img
             src="images/20250113_224512.jpg"
-            class="d-block h-100"
+            class="d-block"
             alt="..."
           />
         </div>
         <div class="carousel-item">
           <img
             src="images/20250113_224620.jpg"
-            class="d-block h-100"
+            class="d-block"
             alt="..."
           />
         </div>
         <div class="carousel-item">
           <img
             src="images/20250113_224947.jpg"
-            class="d-block h-100"
+            class="d-block"
             alt="..."
           />
         </div>
         <div class="carousel-item">
           <img
             src="images/20250114_001319.jpg"
-            class="d-block h-100"
+            class="d-block"
             alt="..."
           />
         </div>
         <div class="carousel-item">
           <img
             src="images/20250114_001718.jpg"
-            class="d-block h-100"
+            class="d-block"
             alt="..."
           />
         </div>
         <div class="carousel-item">
           <img
             src="images/20250114_001856.jpg"
-            class="d-block h-100"
+            class="d-block"
             alt="..."
           />
         </div>
         <div class="carousel-item">
           <img
             src="images/20250114_002106.jpg"
-            class="d-block h-100"
+            class="d-block"
             alt="..."
           />
         </div>
         <div class="carousel-item">
           <img
             src="images/20250114_005205.jpg"
-            class="d-block h-100"
+            class="d-block"
             alt="..."
           />
         </div>
         <div class="carousel-item">
           <img
             src="images/20250113_230320.jpg"
-            class="d-block h-100"
+            class="d-block"
             alt="..."
           />
         </div>
         <div class="carousel-item">
           <img
             src="images/20250114_005741.jpg"
-            class="d-block h-100"
+            class="d-block"
             alt="..."
           />
         </div>
         <div class="carousel-item">
           <img
             src="images/20250114_002625.jpg"
-            class="d-block h-100"
+            class="d-block"
             alt="..."
           />
         </div>
         <div class="carousel-item">
           <img
             src="images/20250114_002817.jpg"
-            class="d-block h-100"
+            class="d-block"
             alt="..."
           />
         </div>
         <div class="carousel-item">
           <img
             src="images/20250114_002958.jpg"
-            class="d-block h-100"
+            class="d-block"
             alt="..."
           />
         </div>
         <div class="carousel-item">
           <img
             src="images/20250114_003132.jpg"
-            class="d-block h-100"
+            class="d-block"
             alt="..."
           />
         </div>
         <div class="carousel-item">
           <img
             src="images/20250113_231237.jpg"
-            class="d-block h-100"
+            class="d-block"
             alt="..."
           />
         </div>
         <div class="carousel-item">
           <img
             src="images/20250114_015022.jpg"
-            class="d-block h-100"
+            class="d-block"
             alt="..."
           />
         </div>
         <div class="carousel-item">
           <img
             src="images/20250114_020923.jpg"
-            class="d-block h-100"
+            class="d-block"
             alt="..."
           />
         </div>
         <div class="carousel-item">
           <img
             src="images/20250113_231550.jpg"
-            class="d-block h-100"
+            class="d-block"
             alt="..."
           />
         </div>
         <div class="carousel-item">
           <img
             src="images/20250113_233700.jpg"
-            class="d-block h-100"
+            class="d-block"
             alt="..."
           />
         </div>
         <div class="carousel-item">
           <img
             src="images/20250114_003702.jpg"
-            class="d-block h-100"
+            class="d-block"
             alt="..."
           />
         </div>
         <div class="carousel-item">
           <img
             src="images/20250114_003837.jpg"
-            class="d-block h-100"
+            class="d-block"
             alt="..."
           />
         </div>
         <div class="carousel-item">
           <img
             src="images/20250114_003949.jpg"
-            class="d-block h-100"
+            class="d-block"
             alt="..."
           />
         </div>
@@ -229,6 +229,34 @@
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
       </button>
+
+      <script>
+        function adjustCarouselImages() {
+          const carouselImages =
+            document.querySelectorAll(".carousel-item img");
+
+          // Get window dimensions
+          const windowWidth = window.innerWidth;
+          const windowHeight = window.innerHeight;
+
+          // Adjust image styles based on window dimensions
+          carouselImages.forEach((img) => {
+            if (windowWidth > windowHeight) {
+              img.style.height = "100vh";
+              img.style.width = "auto";
+              console.log("window lebih lebar")
+            } else {
+              img.style.width = "100vw";
+              img.style.height = "auto";
+              console.log("window lebih tinggi")
+            }
+          });
+        }
+
+        // Run the function on page load and window resize
+        window.addEventListener("load", adjustCarouselImages);
+        window.addEventListener("resize", adjustCarouselImages);
+      </script>
     </div>
   </body>
 </html>
